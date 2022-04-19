@@ -18,8 +18,6 @@ html {
   flex-direction: column;
 }
 
-.nav-list {}
-
 .nav .list-item {
   display: inline;
   padding: 12px;
@@ -31,8 +29,6 @@ html {
 .nav .list-item a {
   color: white;
 }
-
-.nav {}
 
 .fullpage .main-header {
   min-width: 0;
@@ -63,6 +59,7 @@ html {
 .project-image {
   width: 473px;
   height: 286px;
+  border-radius: 25px;
 }
 
 .projects-section-header {
@@ -96,18 +93,44 @@ html {
   background: var(--main-gray);
 }
 
-.button{
-    font-family: "Segoe UI", "Open Sans", sans-serif, Arial;
-    background-color: #006969; /* Green */
-    border: none;
-    color: #fff;
-    padding: 8px 16px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    cursor: pointer;
+.button {
+  display: inline-block;
+  background-color: #b1a7be;
+  border-radius: 10px;
+  border: 4px double #cccccc;
+  color: #eeeeee;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
 }
-.contact-section-header {}
+button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+buttton:hover {
+  background-color: #f7c2f900;
+}
+button:hover span {
+  padding-right: 25px;
+}
+a:hover span:after {
+  opacity: 1;
+  right: 0;
+}
 
 .contact-links {
   display: flex;
@@ -116,6 +139,7 @@ html {
   max-width: 980px;
   margin-top: 4rem;
   flex-wrap: wrap;
+  box-sizing: border-box;
 }
 .btn {
   display: inline-block;
@@ -126,7 +150,7 @@ html {
 .btn-show-all {
   font-size: 2rem;
   background: var(--main-gray);
-  transition: background 0.3s ease-out;
+  transition: 0.3s ease-out;
 }
 
 .btn-show-all:hover {
@@ -142,11 +166,6 @@ html {
   transform: translateX(0);
   transition: transform 0.3s ease-out;
 }
-
-
-.code {}
-
-#profile-link {}
 
 #navbar {
   position: fixed;
